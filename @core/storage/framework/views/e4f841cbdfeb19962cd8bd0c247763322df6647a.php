@@ -1,1 +1,0 @@
-<link rel="stylesheet" href="<?php echo e(asset('assets/backend/css/nice-select.css')); ?>"><?php /**PATH C:\laragon\www\lvbeauty\@core\resources\views/components/niceselect/css.blade.php ENDPATH**/ ?>

@@ -185,46 +185,46 @@
                                             <div class="alert alert-danger">{{ $errors->first('address') }}</div>
                                             @enderror
                                         </div>
-                                        <div class="form-group col-lg-6 col-12">
-                                            <label for="address_province_ship">{{ __('City/Town') }}</label>
-                                            <select id="city" name="city_id">
-                                                <option value="">{{ __('Chọn Tỉnh/Thành') }}</option>
-                                                @foreach($cities as $city)
-                                                    <option value="{{ $city->id }}" {{ $user && $city->id == $user->city_id ? "selected" : "" }}>{{ $city->name }}</option>
-                                                @endforeach
-                                            </select>
-                                            @error('city_id')
-                                            <div class="alert alert-danger">{{ $errors->first('city_id') }}</div>
-                                            @enderror
-                                        </div>
-                                        <div class="form-group col-lg-6 col-12">
-                                            <label for="address_province_ship">{{ __('Quận/Huyện') }}</label>
-                                            <select id="district" name="district_id">
-                                                <option value="">{{ __('Chọn quận/huyện') }}</option>
-                                                @if(isset($user) && isset($user->city_id))
-                                                    @foreach($user->city->district as $district)
-                                                        <option value="{{ $district->id }}" {{ $user && $district->id == $user->district_id ? "selected" : "" }}>{{ $district->name }}</option>
-                                                    @endforeach
-                                                @endif
-                                            </select>
-                                            @error('district_id')
-                                            <div class="alert alert-danger">{{ $errors->first('district_id') }}</div>
-                                            @enderror
-                                        </div>
-                                        <div class="form-group col-lg-6 col-12">
-                                            <label for="address_province_ship">{{ __('Phường/Xã') }}</label>
-                                            <select id="ward" name="ward_id">
-                                                <option value="">{{ __('Chon phường/xã') }}</option>
-                                                @if(isset($user) && isset($user->district_id))
-                                                    @foreach($user->city->district->awards as $ward)
-                                                        <option value="{{ $ward->id }}" {{ $user && $ward->id == $user->ward_id ? "selected" : "" }}>{{ $ward->name }}</option>
-                                                    @endforeach
-                                                @endif
-                                            </select>
-                                            @error('ward_id')
-                                            <div class="alert alert-danger">{{ $errors->first('ward_id') }}</div>
-                                            @enderror
-                                        </div>
+{{--                                        <div class="form-group col-lg-6 col-12">--}}
+{{--                                            <label for="address_province_ship">{{ __('City/Town') }}</label>--}}
+{{--                                            <select id="city" name="city_id">--}}
+{{--                                                <option value="">{{ __('Chọn Tỉnh/Thành') }}</option>--}}
+{{--                                                @foreach($cities as $city)--}}
+{{--                                                    <option value="{{ $city->id }}" {{ $user && $city->id == $user->city_id ? "selected" : "" }}>{{ $city->name }}</option>--}}
+{{--                                                @endforeach--}}
+{{--                                            </select>--}}
+{{--                                            @error('city_id')--}}
+{{--                                            <div class="alert alert-danger">{{ $errors->first('city_id') }}</div>--}}
+{{--                                            @enderror--}}
+{{--                                        </div>--}}
+{{--                                        <div class="form-group col-lg-6 col-12">--}}
+{{--                                            <label for="address_province_ship">{{ __('Quận/Huyện') }}</label>--}}
+{{--                                            <select id="district" name="district_id">--}}
+{{--                                                <option value="">{{ __('Chọn quận/huyện') }}</option>--}}
+{{--                                                @if(isset($user) && isset($user->city_id))--}}
+{{--                                                    @foreach($user->city->district as $district)--}}
+{{--                                                        <option value="{{ $district->id }}" {{ $user && $district->id == $user->district_id ? "selected" : "" }}>{{ $district->name }}</option>--}}
+{{--                                                    @endforeach--}}
+{{--                                                @endif--}}
+{{--                                            </select>--}}
+{{--                                            @error('district_id')--}}
+{{--                                            <div class="alert alert-danger">{{ $errors->first('district_id') }}</div>--}}
+{{--                                            @enderror--}}
+{{--                                        </div>--}}
+{{--                                        <div class="form-group col-lg-6 col-12">--}}
+{{--                                            <label for="address_province_ship">{{ __('Phường/Xã') }}</label>--}}
+{{--                                            <select id="ward" name="ward_id">--}}
+{{--                                                <option value="">{{ __('Chon phường/xã') }}</option>--}}
+{{--                                                @if(isset($user) && isset($user->district_id))--}}
+{{--                                                    @foreach($user->city->district->awards as $ward)--}}
+{{--                                                        <option value="{{ $ward->id }}" {{ $user && $ward->id == $user->ward_id ? "selected" : "" }}>{{ $ward->name }}</option>--}}
+{{--                                                    @endforeach--}}
+{{--                                                @endif--}}
+{{--                                            </select>--}}
+{{--                                            @error('ward_id')--}}
+{{--                                            <div class="alert alert-danger">{{ $errors->first('ward_id') }}</div>--}}
+{{--                                            @enderror--}}
+{{--                                        </div>--}}
 
 {{--                                        <div class="form-group col-lg-6 col-12">--}}
 {{--                                            <label for="address_zip_ship_2">{{ __('Zip Code') }}</label>--}}

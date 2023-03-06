@@ -61,7 +61,7 @@ class NewsletterWidget extends WidgetBase
             <form action="'.route('frontend.subscribe.newsletter').'" method="POST" class="email-subscribe">
                 <input type="hidden" name="_token" value="'.csrf_token().'">
                 <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="' . __("Email của bạn") . '">
+                    <input type="email" name="email" class="form-control" placeholder="' . __("Your Email") . '">
                     <button type="submit" class="form-btn-2 ex submit-btn">
                         <i class="lar la-paper-plane"></i>
                     </button>

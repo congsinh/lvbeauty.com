@@ -32,13 +32,16 @@ class ProductSellPaymentController extends Controller
     {
         $this->validate($request, [
             // user info
-            'name' => 'required|string|max:191',
-            'email' => 'required|email',
-            'ward_id' => 'required|exists:wards,id',
-            'address' => 'required|string|max:191',
-            'city_id' => 'required',
-            'district_id' => 'required|exists:districts,id',
-            'zipcode' => 'nullable|string',
+//            'name' => 'required|string|max:191',
+            'name' => 'nullable|string|max:191',
+//            'email' => 'required|email',
+            'email' => 'nullable|email',
+//            'ward_id' => 'required|exists:wards,id',
+//            'address' => 'required|string|max:191',
+            'address' => 'nullable|string|max:191',
+//            'city_id' => 'required',
+//            'district_id' => 'required|exists:districts,id',
+//            'zipcode' => 'nullable|string',
             'phone' => 'required|string',
             'shipping_address_id' => 'nullable|string|max:191',
             'selected_shipping_option' => 'nullable|string|max:191',
@@ -55,17 +58,17 @@ class ProductSellPaymentController extends Controller
         'order_note' => "nullable|string|max:1000"
         ], [
 //            'agree.required' => __('You need to agree to our Terms & Conditions to complete the order'),
-            'name.required' => __('Vui lòng nhập họ tên'),
-            'name.max' => __('Họ tên không dài quá 191 ký tự'),
-            'email.required' => __('Vui lòng nhập email'),
-            'email.email' => __('Email không đúng định dạng'),
-            'ward_id.required' => __('Vui lòng chọn phường/xã'),
-            'address.required' => __('Vui lòng nhập địa chỉ'),
-            'address.max' => __('Địa chỉ không dài quá 191 ký tự'),
-            'city_id.required' => __('Vui lòng chọn tỉnh/thành'),
-            'district_id.required' => __('Vui lòng chọn quận/huyện'),
-            'phone.required' => __('Vui lòng nhập số điện thoại'),
-            'order_note.max' => __('Ghi chú đơn hàng không được dài quá 1000 ký tự'),
+//            'name.required' => __('Vui lòng nhập họ tên'),
+//            'name.max' => __('Họ tên không dài quá 191 ký tự'),
+//            'email.required' => __('Vui lòng nhập email'),
+//            'email.email' => __('Email không đúng định dạng'),
+//            'ward_id.required' => __('Vui lòng chọn phường/xã'),
+//            'address.required' => __('Vui lòng nhập địa chỉ'),
+//            'address.max' => __('Địa chỉ không dài quá 191 ký tự'),
+//            'city_id.required' => __('Vui lòng chọn tỉnh/thành'),
+//            'district_id.required' => __('Vui lòng chọn quận/huyện'),
+//            'phone.required' => __('Vui lòng nhập số điện thoại'),
+//            'order_note.max' => __('Ghi chú đơn hàng không được dài quá 1000 ký tự'),
 //            'password.min' => __('Mật khẩu dài ít nhất 8 ký tự'),
 //            'password.confirmed' => __('Mật khẩu và mật khẩu xác nhận không trùng khớp'),
 //            'create_account.max' => __('Tên đăng nhập không được dài quá 191 ký tự'),
@@ -196,7 +199,7 @@ class ProductSellPaymentController extends Controller
         ];
 
         $product_sell_info = ProductSellInfo::create($product_sell_info);
-        
+
         CartAction::storeItemSoldCount($all_cart_items, $products);
         try{
             return PaymentHelper::chargeCustomer($product_sell_info, $request);

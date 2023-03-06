@@ -34,6 +34,7 @@ $page_post = $page_post ?? (object)['footer_variant' => null];
 
                 <?php endif; ?>
             </div>
+
         </div>
     </div>
     <div class="footer-bottom">

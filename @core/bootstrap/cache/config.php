@@ -1,13 +1,13 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'Zaika',
+    'name' => 'Elitetailor.com',
     'env' => 'production',
     'debug' => true,
     'url' => 'http://localhost',
     'asset_url' => NULL,
     'timezone' => 'UTC',
-    'locale' => 'vi',
+    'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
     'key' => 'base64:8e5wSFpua5CzuHhXJEaJHcpRFBR2nqLAV0zTURuXgLA=',
@@ -242,7 +242,7 @@
         'endpoint' => NULL,
       ),
     ),
-    'prefix' => 'zaika_cache',
+    'prefix' => 'elitetailorcom_cache',
   ),
   'database' => 
   array (
@@ -253,7 +253,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'lvbeauty',
+        'database' => 'elite',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -263,7 +263,7 @@
         'url' => NULL,
         'host' => 'localhost',
         'port' => '3306',
-        'database' => 'lvbeauty',
+        'database' => 'elite',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -283,7 +283,7 @@
         'url' => NULL,
         'host' => 'localhost',
         'port' => '3306',
-        'database' => 'lvbeauty',
+        'database' => 'elite',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -298,7 +298,7 @@
         'url' => NULL,
         'host' => 'localhost',
         'port' => '3306',
-        'database' => 'lvbeauty',
+        'database' => 'elite',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -313,7 +313,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'zaika_database_',
+        'prefix' => 'elitetailorcom_database_',
       ),
       'default' => 
       array (
@@ -765,7 +765,7 @@
     'from' => 
     array (
       'address' => NULL,
-      'name' => 'Zaika',
+      'name' => 'Elitetailor.com',
     ),
     'markdown' => 
     array (
@@ -1264,7 +1264,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'zaika_session',
+    'cookie' => 'elitetailorcom_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => false,
@@ -1716,7 +1716,7 @@
         'app_id' => '',
       ),
       'payment_action' => '',
-      'currency' => 'VND',
+      'currency' => 'USD',
       'notify_url' => '',
       'locale' => 'en_US',
       'validate_ssl' => true,
@@ -1785,7 +1785,7 @@
       'client_secret' => 'TEST-4644184554273630-070813-7d817e2ca1576e75884001d0755f8a7a-786499991',
       'test_mode' => true,
     ),
-    'global_currency' => 'VND',
+    'global_currency' => 'USD',
     'ngn_exchange_rate' => '409.91',
     'inr_exchange_rate' => '74.85',
     'usd_exchange_rate' => NULL,

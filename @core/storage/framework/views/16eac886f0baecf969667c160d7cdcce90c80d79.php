@@ -240,67 +240,46 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
                                         </div>
-                                        <div class="form-group col-lg-6 col-12">
-                                            <label for="address_province_ship"><?php echo e(__('City/Town')); ?></label>
-                                            <select id="city" name="city_id">
-                                                <option value=""><?php echo e(__('Chọn Tỉnh/Thành')); ?></option>
-                                                <?php $__currentLoopData = $cities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                    <option value="<?php echo e($city->id); ?>" <?php echo e($user && $city->id == $user->city_id ? "selected" : ""); ?>><?php echo e($city->name); ?></option>
-                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                            </select>
-                                            <?php $__errorArgs = ['city_id'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                                            <div class="alert alert-danger"><?php echo e($errors->first('city_id')); ?></div>
-                                            <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-                                        </div>
-                                        <div class="form-group col-lg-6 col-12">
-                                            <label for="address_province_ship"><?php echo e(__('Quận/Huyện')); ?></label>
-                                            <select id="district" name="district_id">
-                                                <option value=""><?php echo e(__('Chọn quận/huyện')); ?></option>
-                                                <?php if(isset($user) && isset($user->city_id)): ?>
-                                                    <?php $__currentLoopData = $user->city->district; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $district): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <option value="<?php echo e($district->id); ?>" <?php echo e($user && $district->id == $user->district_id ? "selected" : ""); ?>><?php echo e($district->name); ?></option>
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                <?php endif; ?>
-                                            </select>
-                                            <?php $__errorArgs = ['district_id'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                                            <div class="alert alert-danger"><?php echo e($errors->first('district_id')); ?></div>
-                                            <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-                                        </div>
-                                        <div class="form-group col-lg-6 col-12">
-                                            <label for="address_province_ship"><?php echo e(__('Phường/Xã')); ?></label>
-                                            <select id="ward" name="ward_id">
-                                                <option value=""><?php echo e(__('Chon phường/xã')); ?></option>
-                                                <?php if(isset($user) && isset($user->district_id)): ?>
-                                                    <?php $__currentLoopData = $user->city->district->awards; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ward): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <option value="<?php echo e($ward->id); ?>" <?php echo e($user && $ward->id == $user->ward_id ? "selected" : ""); ?>><?php echo e($ward->name); ?></option>
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                <?php endif; ?>
-                                            </select>
-                                            <?php $__errorArgs = ['ward_id'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                                            <div class="alert alert-danger"><?php echo e($errors->first('ward_id')); ?></div>
-                                            <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

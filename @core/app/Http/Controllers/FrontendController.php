@@ -82,7 +82,6 @@ class FrontendController extends Controller
         $static_field_data = StaticOption::whereIn('option_name', HomePageStaticSettings::get_home_field(get_static_option('home_page_variant')))->get()->mapWithKeys(function ($item) {
             return [$item->option_name => $item->option_value];
         })->toArray();
-
         return view('frontend.frontend-home')->with([
             'all_header_slider' => $all_header_slider,
             'all_blog' => $all_blog,

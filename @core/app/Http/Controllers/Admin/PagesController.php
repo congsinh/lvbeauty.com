@@ -94,11 +94,9 @@ class PagesController extends Controller
             "breadcrumb_status" => 'nullable|string|max:191',
             'page_container_option' => 'nullable|string|max:191',
         ]);
-
         $slug = !empty($request->slug) ? $request->slug : Str::slug($request->title);
         $slug_check = Page::where(['slug' => $slug])->count();
         $slug = $slug_check > 1 ? $slug . '2' : $slug;
-
         Page::where('id', $id)->update([
             'status' => $request->status,
             'content' => $request->page_content,
@@ -113,7 +111,6 @@ class PagesController extends Controller
             'breadcrumb_status' => $request->breadcrumb_status ? 1 : 0,
             'page_container_option' => (int) !! $request->page_container_option,
         ]);
-
         return redirect()->back()->with([
             'msg' => __('Page updated...'),
             'type' => 'success'

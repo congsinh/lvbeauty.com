@@ -5214,6 +5214,11 @@ footer.footer-area.style-new-01.border-top .footer-widget.widget {
 	.search-bar .menu-search-form .search-close {top: 69px;right: 1px;}
 
 .search-bar.active {width: 320px;left: -140px;}
+
+  .logo-wrapper img{
+    max-width: 200px;
+    max-height: 40px;
+  }
 }
 
 .user-dashboard-wrapper .tab-content ul li {
@@ -5223,7 +5228,7 @@ footer.footer-area.style-new-01.border-top .footer-widget.widget {
 
 .logo-wrapper img{
     max-width: 200px;
-    max-height: 80px;
+    max-height: 100px;
 }
 
 
