@@ -1,10 +1,10 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'Elitetailor.com',
+    'name' => 'elitetailorhoian.com',
     'env' => 'production',
-    'debug' => true,
-    'url' => 'http://localhost',
+    'debug' => false,
+    'url' => 'https://elitetailorhoian.com',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'en',
@@ -203,7 +203,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\laragon\\www\\lvbeauty\\@core\\storage\\framework/cache/data',
+        'path' => '/home/eli04190/public_html/@core/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -242,7 +242,7 @@
         'endpoint' => NULL,
       ),
     ),
-    'prefix' => 'elitetailorcom_cache',
+    'prefix' => 'elitetailorhoiancom_cache',
   ),
   'database' => 
   array (
@@ -253,7 +253,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'elite',
+        'database' => 'eli04190_elitetailor',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -263,9 +263,9 @@
         'url' => NULL,
         'host' => 'localhost',
         'port' => '3306',
-        'database' => 'elite',
-        'username' => 'root',
-        'password' => '',
+        'database' => 'eli04190_elitetailor',
+        'username' => 'eli04190_elitetailor',
+        'password' => 'Sinh@05021992',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -283,9 +283,9 @@
         'url' => NULL,
         'host' => 'localhost',
         'port' => '3306',
-        'database' => 'elite',
-        'username' => 'root',
-        'password' => '',
+        'database' => 'eli04190_elitetailor',
+        'username' => 'eli04190_elitetailor',
+        'password' => 'Sinh@05021992',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -298,9 +298,9 @@
         'url' => NULL,
         'host' => 'localhost',
         'port' => '3306',
-        'database' => 'elite',
-        'username' => 'root',
-        'password' => '',
+        'database' => 'eli04190_elitetailor',
+        'username' => 'eli04190_elitetailor',
+        'password' => 'Sinh@05021992',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -313,7 +313,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'elitetailorcom_database_',
+        'prefix' => 'elitetailorhoiancom_database_',
       ),
       'default' => 
       array (
@@ -395,7 +395,7 @@
     array (
       'enabled' => true,
       'driver' => 'file',
-      'path' => 'C:\\laragon\\www\\lvbeauty\\@core\\storage\\debugbar',
+      'path' => '/home/eli04190/public_html/@core/storage/debugbar',
       'connection' => NULL,
       'provider' => '',
       'hostname' => '127.0.0.1',
@@ -514,13 +514,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\laragon\\www\\lvbeauty\\@core\\storage\\app',
+        'root' => '/home/eli04190/public_html/@core/storage/app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\laragon\\www\\lvbeauty\\@core\\storage\\app/public',
-        'url' => 'http://localhost/storage',
+        'root' => '/home/eli04190/public_html/@core/storage/app/public',
+        'url' => 'https://elitetailorhoian.com/storage',
         'visibility' => 'public',
       ),
       's3' => 
@@ -568,7 +568,7 @@
     'include_helpers' => false,
     'helper_files' => 
     array (
-      0 => 'C:\\laragon\\www\\lvbeauty\\@core/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
+      0 => '/home/eli04190/public_html/@core/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
     ),
     'model_locations' => 
     array (
@@ -664,13 +664,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\laragon\\www\\lvbeauty\\@core\\storage\\logs/laravel.log',
+        'path' => '/home/eli04190/public_html/@core/storage/logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\laragon\\www\\lvbeauty\\@core\\storage\\logs/laravel.log',
+        'path' => '/home/eli04190/public_html/@core/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -765,14 +765,14 @@
     'from' => 
     array (
       'address' => NULL,
-      'name' => 'Elitetailor.com',
+      'name' => 'elitetailorhoian.com',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\laragon\\www\\lvbeauty\\@core\\resources\\views/vendor/mail',
+        0 => '/home/eli04190/public_html/@core/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -803,7 +803,7 @@
       'mode' => 'live',
       'http.ConnectionTimeOut' => 30,
       'log.LogEnabled' => true,
-      'log.FileName' => 'C:\\laragon\\www\\lvbeauty\\@core\\storage/logs/paypal.log',
+      'log.FileName' => '/home/eli04190/public_html/@core/storage/logs/paypal.log',
       'log.LogLevel' => 'ERROR',
     ),
   ),
@@ -867,7 +867,7 @@
     'encoding' => 'UTF-8',
     'finalize' => true,
     'ignoreNonStrings' => false,
-    'cachePath' => 'C:\\laragon\\www\\lvbeauty\\@core\\storage\\app/purifier',
+    'cachePath' => '/home/eli04190/public_html/@core/storage/app/purifier',
     'cacheFileMode' => 493,
     'settings' => 
     array (
@@ -1196,7 +1196,7 @@
       2 => '127.0.0.1',
       3 => '127.0.0.1:8000',
       4 => '::1',
-      5 => 'localhost',
+      5 => 'elitetailorhoian.com',
     ),
     'guard' => 
     array (
@@ -1255,7 +1255,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\laragon\\www\\lvbeauty\\@core\\storage\\framework/sessions',
+    'files' => '/home/eli04190/public_html/@core/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -1264,7 +1264,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'elitetailorcom_session',
+    'cookie' => 'elitetailorhoiancom_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => false,
@@ -1275,9 +1275,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\laragon\\www\\lvbeauty\\@core\\resources\\views',
+      0 => '/home/eli04190/public_html/@core/resources/views',
     ),
-    'compiled' => 'C:\\laragon\\www\\lvbeauty\\@core\\storage\\framework\\views',
+    'compiled' => '/home/eli04190/public_html/@core/storage/framework/views',
   ),
   'dompdf' => 
   array (
@@ -1285,10 +1285,10 @@
     'orientation' => 'portrait',
     'defines' => 
     array (
-      'font_dir' => 'C:\\laragon\\www\\lvbeauty\\@core\\storage\\fonts/',
-      'font_cache' => 'C:\\laragon\\www\\lvbeauty\\@core\\storage\\fonts/',
-      'temp_dir' => 'C:\\Users\\XuanVinh\\AppData\\Local\\Temp',
-      'chroot' => 'C:\\laragon\\www\\lvbeauty\\@core',
+      'font_dir' => '/home/eli04190/public_html/@core/storage/fonts/',
+      'font_cache' => '/home/eli04190/public_html/@core/storage/fonts/',
+      'temp_dir' => '/tmp',
+      'chroot' => '/home/eli04190/public_html/@core',
       'enable_font_subsetting' => false,
       'pdf_backend' => 'CPDF',
       'default_media_type' => 'screen',
@@ -1348,7 +1348,7 @@
     'stubs' => 
     array (
       'enabled' => false,
-      'path' => 'C:\\laragon\\www\\lvbeauty\\@core\\vendor/nwidart/laravel-modules/src/Commands/stubs',
+      'path' => '/home/eli04190/public_html/@core/vendor/nwidart/laravel-modules/src/Commands/stubs',
       'files' => 
       array (
         'routes/web' => 'Routes/web.php',
@@ -1412,9 +1412,9 @@
     ),
     'paths' => 
     array (
-      'modules' => 'C:\\laragon\\www\\lvbeauty\\@core\\Modules',
-      'assets' => 'C:\\laragon\\www\\lvbeauty\\@core\\public\\modules',
-      'migration' => 'C:\\laragon\\www\\lvbeauty\\@core\\database/migrations',
+      'modules' => '/home/eli04190/public_html/@core/Modules',
+      'assets' => '/home/eli04190/public_html/@core/public/modules',
+      'migration' => '/home/eli04190/public_html/@core/database/migrations',
       'generator' => 
       array (
         'config' => 
@@ -1607,7 +1607,7 @@
       'enabled' => false,
       'paths' => 
       array (
-        0 => 'C:\\laragon\\www\\lvbeauty\\@core\\vendor/*/*',
+        0 => '/home/eli04190/public_html/@core/vendor/*/*',
       ),
     ),
     'composer' => 
@@ -1636,7 +1636,7 @@
       'file' => 
       array (
         'class' => 'Nwidart\\Modules\\Activators\\FileActivator',
-        'statuses-file' => 'C:\\laragon\\www\\lvbeauty\\@core\\modules_statuses.json',
+        'statuses-file' => '/home/eli04190/public_html/@core/modules_statuses.json',
         'cache-key' => 'activator.installed',
         'cache-lifetime' => 604800,
       ),
