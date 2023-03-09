@@ -209,9 +209,9 @@ class ProductFilterStyleOne extends PageBuilderBase
                     <div class="col-lg-6">
                         <div class="our-stor-isotop-btn-wrapper">
                             <ul class="our-stor-btn-list">
-                                <li id="product_filter_featured_products">{$featured_text}</li>
-                                <li id="product_filter_top_selling">{$top_selling_text}</li>
-                                <li id="product_filter_new_products">{$new_text}</li>
+                                <li id="product_filter_featured_products">Women's Clothes</li>
+                                <li id="product_filter_top_selling">Men's Clothes </li>
+<!--                                <li id="product_filter_new_products">{$new_text}</li>-->
                             </ul>
                         </div>
                     </div>
