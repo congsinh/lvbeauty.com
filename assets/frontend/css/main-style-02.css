@@ -3244,10 +3244,10 @@ object {
 
 .navbar-area .new-nav-container .navbar-collapse .navbar-nav li {
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   font-family: var(--body-font);
   text-transform: capitalize;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 70px;
 }
 
