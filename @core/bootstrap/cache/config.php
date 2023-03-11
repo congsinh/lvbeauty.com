@@ -1,7 +1,7 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'Elitetailor.com',
+    'name' => 'elitetailorhoian.com',
     'env' => 'production',
     'debug' => true,
     'url' => 'http://localhost',
@@ -242,7 +242,7 @@
         'endpoint' => NULL,
       ),
     ),
-    'prefix' => 'elitetailorcom_cache',
+    'prefix' => 'elitetailorhoiancom_cache',
   ),
   'database' => 
   array (
@@ -313,7 +313,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'elitetailorcom_database_',
+        'prefix' => 'elitetailorhoiancom_database_',
       ),
       'default' => 
       array (
@@ -765,7 +765,7 @@
     'from' => 
     array (
       'address' => NULL,
-      'name' => 'Elitetailor.com',
+      'name' => 'elitetailorhoian.com',
     ),
     'markdown' => 
     array (
@@ -1264,7 +1264,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'elitetailorcom_session',
+    'cookie' => 'elitetailorhoiancom_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => false,
