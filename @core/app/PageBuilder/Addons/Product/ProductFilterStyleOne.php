@@ -15,6 +15,7 @@ use App\PageBuilder\PageBuilderBase;
 use App\Product\Product;
 use App\Product\ProductCategory;
 use Intervention\Image\Facades\Image as InterImage;
+use phpDocumentor\Reflection\PseudoTypes\LowercaseString;
 
 class ProductFilterStyleOne extends PageBuilderBase
 {
@@ -192,6 +193,87 @@ class ProductFilterStyleOne extends PageBuilderBase
         // loader
         $loader = $this->loader();
 
+
+        $galaries = [];
+        $dirs = array_filter(glob('assets/uploads/media-uploader/*'), 'is_dir');
+        rsort($dirs);
+        foreach($dirs as $dir)
+        {
+            $path = explode('/', $dir);
+            $cate = $path[count($path) - 1];
+            $galaries[$cate] = [];
+            $subDirs = array_filter(glob($dir.'/*'), 'is_dir');
+            foreach($subDirs as $subDir)
+            {
+                $subPath = explode('/', $subDir);
+                $subCate = $subPath[count($subPath) - 1];
+                $images = glob( $subDir . '/*.{jpg,jpeg,png,gif,JPG,PNG,JPEG,GIF}', GLOB_BRACE);
+                $galaries[$cate][$subCate] = $images;
+            }
+        }
+        $cateListHTML = "";
+        $subCateHTML = "";
+        $cateHTML = "";
+        $url = config('app.app_url');
+        foreach($galaries as $caterory => $subCate){
+            $cateSlug = create_slug(str_replace("'", "", $caterory));
+            $cateListHTML.= "<li data-cate='".$cateSlug."' data-type='category' class='". ("women_clothes" == $cateSlug ? 'active' : '') ."'>".$caterory."</li>";
+            $subCateListHTML = "";
+            $subCateListHTML .= "<ul class='our-stor-btn-list' id='our-stor-btn-list-sub-category'>";
+
+            foreach($subCate as $subCateName => $cate){
+
+                $slug = create_slug(str_replace("'", "", $subCateName));
+                $i = 1;
+                $subCateListHTML.= "<li data-cate='".$slug."' data-type='sub-category' class='our-stor-btn-list'>".$subCateName."</li>";
+                $imageHTML = "";
+                $x = 1;
+                foreach($cate as $image){
+                    if($x <= 16){
+                        $url = config('app.url') ."/". $image;
+                        $imageHTML.= "<div class='col-sm-6 col-md-4 col-lg-3'>
+                                        <div class='single-new-popular-dress-item style-02'>
+                                            <div class='img-box bg-color-off-white'>
+                                                    <span class='tag-box-new top-right flex-column'></span>
+                                                    <span class='product-bg-img bg-position-bottom'
+                                                            style='background-image: url(".$url."); background-size: cover'
+                                                            data-width='100%' data-height='380'>
+                                                    </span>
+                                            </div>
+                                        </div>
+                                   </div>";
+                    }
+                    $x++;
+                }
+                $subCateHTML.= "<div class='row ". ($i == 1 ? '' : "d-none") ."' id='product_filter_section_sub-category_".$slug."'>
+                                    ".$imageHTML."
+                                </div>";
+                $i++;
+            }
+            $subCateListHTML.="</ul>";
+            $cateHTML.= "<div class='row our-store-item-wrap product_filter_section_category ". ("women_clothes" == $cateSlug ? '' : 'd-none') ."' id='product_filter_section_category_".$cateSlug."'>
+                    <div class='container custom-container-1618 filter-two-main-container'>
+                    <div class='row justify-content-center'>
+                        <div class='col-lg-12'>
+                            <div class='our-stor-isotop-btn-wrapper' style='text-align: left'>
+                                {$subCateListHTML}
+                            </div>
+                        </div>
+                    </div>
+                    <div class='our-store-item-wrap product-filter-style-two-product-wrapper' data-item-limit='8'>
+                        <div class='filter-style-block-preloader lds-ellipsis'>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        {$subCateHTML}
+                        ";
+
+            $cateHTML .= "</div>
+                    </div>
+                </div>";
+        };
         return <<<HTML
         <div class="our-store-area-wrapper" data-padding-top="{$padding_top}" data-padding-bottom="{$padding_bottom}">
             <div class="container">
@@ -208,16 +290,13 @@ class ProductFilterStyleOne extends PageBuilderBase
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="our-stor-isotop-btn-wrapper">
-                            <ul class="our-stor-btn-list">
-                                <li id="product_filter_featured_products">{$featured_text}</li>
-                                <li id="product_filter_top_selling">{$top_selling_text}</li>
-                                <li id="product_filter_new_products">{$new_text}</li>
+                            <ul class="our-stor-btn-list" id="our-stor-btn-list-category">
+                                {$cateListHTML}
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="row our-store-item-wrap" id="product_filter_section">
-                    {$output}
+                {$cateHTML}
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-4">
@@ -228,7 +307,7 @@ class ProductFilterStyleOne extends PageBuilderBase
                 </div>
             </div>
         </div>
-        {$loader}
+    {$loader}
 HTML;
     }
 

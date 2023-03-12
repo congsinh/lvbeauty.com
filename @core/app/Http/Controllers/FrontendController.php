@@ -66,13 +66,11 @@ class FrontendController extends Controller
         // todo: check for custom page selection for homepage
         // todo: if has custom page for render as home page
         // todo: return dynamic pages blade along with data
-
         // todo: fetch static_option table row for dynamic page
         $page = StaticOption::where("option_name","home_page_identity")->select("id","option_value")->first();
         $default = StaticOption::where("option_name","default_home_page")->select("id","option_value")->first();
         if (!empty($page->option_value) && $default->option_value == "on") {
             $page_post = Page::where('id', $page->option_value)->first();
-
             return view('frontend.pages.dynamic-single', compact('page_post'));
         }
 
@@ -82,6 +80,8 @@ class FrontendController extends Controller
         $static_field_data = StaticOption::whereIn('option_name', HomePageStaticSettings::get_home_field(get_static_option('home_page_variant')))->get()->mapWithKeys(function ($item) {
             return [$item->option_name => $item->option_value];
         })->toArray();
+
+
         return view('frontend.frontend-home')->with([
             'all_header_slider' => $all_header_slider,
             'all_blog' => $all_blog,
@@ -844,18 +844,18 @@ class FrontendController extends Controller
      * ======================================================================*/
     public function topRatedProducts(Request $req)
     {
-        $products = Product::where('status', 'publish')
-            ->withAvg('rating', 'rating')
-            ->with('inventory')
-            ->orderBy('rating_avg_rating', 'DESC')
-            ->take(8)
-            ->get();
-
+//        $products = Product::where('status', 'publish')
+//            ->withAvg('rating', 'rating')
+//            ->with('inventory')
+//            ->orderBy('rating_avg_rating', 'DESC')
+//            ->take(8)
+//            ->get();
+        $galaries = [];
         if(($req->style ?? "") == "two"){
-            return view("frontend.partials.product_filter_style_two",compact("products"))->render();
+            return view("frontend.partials.product_filter_style_two",compact(""))->render();
         }
-
-        return view('frontend.partials.filter-item', compact('products'));
+//        return view('frontend.partials.filter-item', compact(''));
+        return view('frontend.partials.galaries', compact('galaries'));
     }
 
     public function topSellingProducts(Request $req)

@@ -1,5 +1,16 @@
 
 <script>
+    $(document).on('click', ".our-stor-btn-list li", function () {
+        type = $(this).data('type');
+        cate = $(this).data('cate');
+        console.log(type, cate);
+        $(`#our-stor-btn-list-${type} li`).removeClass("active");
+        $(`.product_filter_section_${type}`).addClass('d-none');
+        $(`#product_filter_section_${type}_${cate}`).removeClass('d-none');
+        $(this).addClass("active");
+    });
+
+
     $(document).on("click",".product_filter_style_two",function (){
         $(".product-filter-style-two-product-wrapper .row").hide();
         $(".product_filter_style_two").removeClass("active");
@@ -314,18 +325,18 @@
                 });
             });
 
-            $('#product_filter_featured_products').on('click', function (e) {
-                let url = '{{ route("frontend.products.filter.top.rated") }}';
-                loadFilterData(url);
-            });
-            $('#product_filter_top_selling').on('click', function (e) {
-                let url = '{{ route("frontend.products.filter.top.selling") }}';
-                loadFilterData(url);
-            });
-            $('#product_filter_new_products').on('click', function (e) {
-                let url = '{{ route("frontend.products.filter.new") }}';
-                loadFilterData(url);
-            });
+            {{--$('#product_filter_featured_products').on('click', function (e) {--}}
+            {{--    let url = '{{ route("frontend.products.filter.top.rated") }}';--}}
+            {{--    loadFilterData(url);--}}
+            {{--});--}}
+            {{--$('#product_filter_top_selling').on('click', function (e) {--}}
+            {{--    let url = '{{ route("frontend.products.filter.top.selling") }}';--}}
+            {{--    loadFilterData(url);--}}
+            {{--});--}}
+            {{--$('#product_filter_new_products').on('click', function (e) {--}}
+            {{--    let url = '{{ route("frontend.products.filter.new") }}';--}}
+            {{--    loadFilterData(url);--}}
+            {{--});--}}
 
             $(document).on('click', '#quickview', function (e) {
                 e.preventDefault();
@@ -503,23 +514,23 @@
             });
         }
 
-        function loadFilterData(url) {
-            $('.lds-ellipsis').show();
-            $.ajax({
-                url: url,
-                type: 'GET',
-                success: function (data) {
-                    if (data) {
-                        $('#product_filter_section').html(data);
-                        $('.lds-ellipsis').hide(300);
-                    }
-                },
-                erorr: function (err) {
-                    toastr.error('{{ __("An error occurred") }}');
-                    $('.lds-ellipsis').hide(300);
-                }
-            });
-        }
+        {{--function loadFilterData(url) {--}}
+        {{--    $('.lds-ellipsis').show();--}}
+        {{--    $.ajax({--}}
+        {{--        url: url,--}}
+        {{--        type: 'GET',--}}
+        {{--        success: function (data) {--}}
+        {{--            if (data) {--}}
+        {{--                $('#product_filter_section').html(data);--}}
+        {{--                $('.lds-ellipsis').hide(300);--}}
+        {{--            }--}}
+        {{--        },--}}
+        {{--        erorr: function (err) {--}}
+        {{--            toastr.error('{{ __("An error occurred") }}');--}}
+        {{--            $('.lds-ellipsis').hide(300);--}}
+        {{--        }--}}
+        {{--    });--}}
+        {{--}--}}
 
         function loadProductAttributeHtml(slug) {
             let url = "{{ route('frontend.products.attribute.html') }}";

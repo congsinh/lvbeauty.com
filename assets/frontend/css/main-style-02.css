@@ -1094,6 +1094,7 @@ object {
 
 .custom-container-1618 {
   max-width: 1618px;
+  margin-top: 30px;
 }
 
 .custom-container-1410 {
@@ -3243,10 +3244,10 @@ object {
 
 .navbar-area .new-nav-container .navbar-collapse .navbar-nav li {
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   font-family: var(--body-font);
   text-transform: capitalize;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 70px;
 }
 

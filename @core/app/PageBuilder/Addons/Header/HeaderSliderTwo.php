@@ -166,11 +166,7 @@ HTML;
             <div class="container nav-container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="header-inner-content-index-02">
-                            <p class="info" style="color:{$title_color}">{$subtitle}</p>
-                            <h3 class="offer">{$title}</h3>
-                            {$button_markup}
-                        </div>
+                        
                     </div>
                 </div>
             </div>

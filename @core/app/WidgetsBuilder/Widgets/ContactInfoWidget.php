@@ -52,7 +52,7 @@ class ContactInfoWidget extends WidgetBase
         if (!empty($location)) {
             $output .= 
             '<li class="info-item">
-                <a href="#"><i class="las la-map-marker icon icon-address"></i>
+                <a href="#" style="text-transform: lowercase"><i class="las la-map-marker icon icon-address"></i>
                     '.purify_html($location).'
                 </a>
             </li>';
@@ -70,7 +70,8 @@ class ContactInfoWidget extends WidgetBase
         if (!empty($email)) {
             $output .= 
             '<li class="info-item">
-                <a href="#"> <i class="lar la-envelope icon icon-address"></i>
+                <a href="mailto:'.$email.'?subject=Elitetailor Customer&body=Hi Elitetailor! Can you help me?" 
+                style="text-transform: lowercase;"> <i class="lar la-envelope icon icon-address" > </i>
                     '.purify_html($email).'
                 </a>
             </li>';
