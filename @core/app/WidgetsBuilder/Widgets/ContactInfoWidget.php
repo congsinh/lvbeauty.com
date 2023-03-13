@@ -52,7 +52,7 @@ class ContactInfoWidget extends WidgetBase
         if (!empty($location)) {
             $output .= 
             '<li class="info-item">
-                <a href="#" style="text-transform: lowercase"><i class="las la-map-marker icon icon-address"></i>
+                <a href="#" ><i class="las la-map-marker icon icon-address"></i>
                     '.purify_html($location).'
                 </a>
             </li>';

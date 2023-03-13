@@ -3,7 +3,7 @@
   array (
     'name' => 'elitetailorhoian.com',
     'env' => 'production',
-    'debug' => true,
+    'debug' => false,
     'url' => 'http://elitetailor.test',
     'asset_url' => NULL,
     'timezone' => 'UTC',

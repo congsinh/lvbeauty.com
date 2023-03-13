@@ -229,10 +229,10 @@ class ProductFilterStyleOne extends PageBuilderBase
             $subCateListHTML .= "<ul class='our-stor-btn-list' id='our-stor-btn-list-sub-category'>";
             $i = 1;
             foreach($subCate as $subCateName => $cate){
-                $slug = create_slug(str_replace("'", "", $subCateName));
-                $subCateListHTML.= "<li data-cate='".$slug."' data-type='sub-category' class='our-stor-btn-list'>".$categoriesName[$subCateName]."</li>";
-                $imageHTML = "";
                 $x = 1;
+                $slug = create_slug(str_replace("'", "", $subCateName));
+                $subCateListHTML.= "<li data-cate='".$slug."' data-type='sub-category' class='our-stor-btn-list ".($x == 1 ? 'active' : '')."'>".$categoriesName[$subCateName]."</li>";
+                $imageHTML = "";
                 foreach($cate as $image){
                     if($x <= 8){
                         $url = config('app.url') ."/". $image;

@@ -130,7 +130,7 @@ class BannerStyleFour extends PageBuilderBase
         $sec_text = __('Sec');
 
         return <<<HTML
-<div class="call-to-action-area-wrapper index-02" data-padding-top="{$padding_top}" data-padding-bottom="{$padding_bottom}">
+<div class="call-to-action-area-wrapper index-02 w-100" data-padding-top="{$padding_top}" data-padding-bottom="{$padding_bottom}">
     <div class="container custom-container-1618">
         <div class="row position-relative">
             <div class="col-lg-7 upper-add">
