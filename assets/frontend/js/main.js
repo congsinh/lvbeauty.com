@@ -261,16 +261,16 @@
             Store area isotope jQuery
         -------------------------------*/
 
-        $(".our-stor-btn-list li").on('click', function () {
-
-            $(".our-stor-btn-list li").removeClass("active");
-            $(this).addClass("active");
-
-            var selector = $(this).attr('data-filter');
-            $(".our-store-item-wrap").isotope({
-                filter: selector
-            });
-        });
+        // $(".our-stor-btn-list li").on('click', function () {
+        //
+        //     $(".our-stor-btn-list li").removeClass("active");
+        //     $(this).addClass("active");
+        //
+        //     var selector = $(this).attr('data-filter');
+        //     $(".our-store-item-wrap").isotope({
+        //         filter: selector
+        //     });
+        // });
 
 
         /*------------------------------

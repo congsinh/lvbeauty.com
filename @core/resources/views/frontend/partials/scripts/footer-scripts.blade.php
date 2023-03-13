@@ -8,31 +8,34 @@
         $(`.product_filter_section_${type}`).addClass('d-none');
         $(`#product_filter_section_${type}_${cate}`).removeClass('d-none');
         $(this).addClass("active");
-    });
-
-
-    $(document).on("click",".product_filter_style_two",function (){
-        $(".product-filter-style-two-product-wrapper .row").hide();
-        $(".product_filter_style_two").removeClass("active");
-        $(this).addClass("active");
-
-        let beforeSend = ".product-filter-style-two-product-wrapper .lds-ellipsis",
-            successResponse = "",
-            data = {style: "two"};
-
-        if($(this).attr("data-filter") == 'campaign'){
-            send_ajax_response_get_response("post","{{ route("frontend.products.filter.campaign") }}",beforeSend,successResponse);
-        }else if($(this).attr("data-filter") == 'new-items'){
-            send_ajax_response_get_response("post","{{ route("frontend.products.filter.new") }}",beforeSend,successResponse);
-        }else if($(this).attr("data-filter") == 'top-rated'){
-            send_ajax_response_get_response("post","{{ route("frontend.products.filter.top.rated") }}",beforeSend,successResponse);
-        }else if($(this).attr("data-filter") == 'top-selling'){
-            send_ajax_response_get_response("post","{{ route("frontend.products.filter.top.selling") }}",beforeSend,successResponse);
-        }else if($(this).attr("data-filter") == 'discounted'){
-            send_ajax_response_get_response("post","{{ route("frontend.products.filter.discounted") }}",beforeSend,successResponse);
+        if(type == "category"){
+            $(`#product_filter_section_category_${cate} .product_filter_section_sub-category:first`).removeClass('d-none')
         }
-
     });
+
+
+    {{--$(document).on("click",".product_filter_style_two",function (){--}}
+    {{--    $(".product-filter-style-two-product-wrapper .row").hide();--}}
+    {{--    $(".product_filter_style_two").removeClass("active");--}}
+    {{--    $(this).addClass("active");--}}
+
+    {{--    let beforeSend = ".product-filter-style-two-product-wrapper .lds-ellipsis",--}}
+    {{--        successResponse = "",--}}
+    {{--        data = {style: "two"};--}}
+
+    {{--    if($(this).attr("data-filter") == 'campaign'){--}}
+    {{--        send_ajax_response_get_response("post","{{ route("frontend.products.filter.campaign") }}",beforeSend,successResponse);--}}
+    {{--    }else if($(this).attr("data-filter") == 'new-items'){--}}
+    {{--        send_ajax_response_get_response("post","{{ route("frontend.products.filter.new") }}",beforeSend,successResponse);--}}
+    {{--    }else if($(this).attr("data-filter") == 'top-rated'){--}}
+    {{--        send_ajax_response_get_response("post","{{ route("frontend.products.filter.top.rated") }}",beforeSend,successResponse);--}}
+    {{--    }else if($(this).attr("data-filter") == 'top-selling'){--}}
+    {{--        send_ajax_response_get_response("post","{{ route("frontend.products.filter.top.selling") }}",beforeSend,successResponse);--}}
+    {{--    }else if($(this).attr("data-filter") == 'discounted'){--}}
+    {{--        send_ajax_response_get_response("post","{{ route("frontend.products.filter.discounted") }}",beforeSend,successResponse);--}}
+    {{--    }--}}
+
+    {{--});--}}
 
     function send_ajax_response_get_response(type,url,data){
         $.ajax({

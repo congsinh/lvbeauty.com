@@ -193,7 +193,14 @@ class ProductFilterStyleOne extends PageBuilderBase
         // loader
         $loader = $this->loader();
 
-
+        $categoriesName = [
+            'men_clothes' => "Men's Clothes",
+            'women_clothes' => "Men's Clothes",
+            'men_suits' => "Men's suits",
+            'bottoms_jumpsuits' => "Bottoms & Jumpsuits",
+            'tops' => "Tops",
+            'jackets' => "Jackets",
+        ];
         $galaries = [];
         $dirs = array_filter(glob('assets/uploads/media-uploader/*'), 'is_dir');
         rsort($dirs);
@@ -212,24 +219,22 @@ class ProductFilterStyleOne extends PageBuilderBase
             }
         }
         $cateListHTML = "";
-        $subCateHTML = "";
         $cateHTML = "";
         $url = config('app.app_url');
         foreach($galaries as $caterory => $subCate){
+            $subCateHTML = "";
             $cateSlug = create_slug(str_replace("'", "", $caterory));
-            $cateListHTML.= "<li data-cate='".$cateSlug."' data-type='category' class='". ("women_clothes" == $cateSlug ? 'active' : '') ."'>".$caterory."</li>";
+            $cateListHTML.= "<li data-cate='".$cateSlug."' data-type='category' class='". ("women_clothes" == $cateSlug ? 'active' : '') ."'>".$categoriesName[$caterory]."</li>";
             $subCateListHTML = "";
             $subCateListHTML .= "<ul class='our-stor-btn-list' id='our-stor-btn-list-sub-category'>";
-
+            $i = 1;
             foreach($subCate as $subCateName => $cate){
-
                 $slug = create_slug(str_replace("'", "", $subCateName));
-                $i = 1;
-                $subCateListHTML.= "<li data-cate='".$slug."' data-type='sub-category' class='our-stor-btn-list'>".$subCateName."</li>";
+                $subCateListHTML.= "<li data-cate='".$slug."' data-type='sub-category' class='our-stor-btn-list'>".$categoriesName[$subCateName]."</li>";
                 $imageHTML = "";
                 $x = 1;
                 foreach($cate as $image){
-                    if($x <= 16){
+                    if($x <= 8){
                         $url = config('app.url') ."/". $image;
                         $imageHTML.= "<div class='col-sm-6 col-md-4 col-lg-3'>
                                         <div class='single-new-popular-dress-item style-02'>
@@ -245,7 +250,7 @@ class ProductFilterStyleOne extends PageBuilderBase
                     }
                     $x++;
                 }
-                $subCateHTML.= "<div class='row ". ($i == 1 ? '' : "d-none") ."' id='product_filter_section_sub-category_".$slug."'>
+                $subCateHTML.= "<div class='row product_filter_section_sub-category ". ($i == 1 ? '' : "d-none") ."' id='product_filter_section_sub-category_".$slug."'>
                                     ".$imageHTML."
                                 </div>";
                 $i++;
