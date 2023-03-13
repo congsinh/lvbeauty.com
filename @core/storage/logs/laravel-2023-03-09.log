@@ -275,3 +275,26 @@
 #51 F:\\PHP\\laragon\\www\\elitetailor\\index.php(72): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #52 {main}
 "} 
+[2023-03-09 08:45:02] production.ERROR: Command "config:cachee" is not defined.
+
+Did you mean one of these?
+    config:cache
+    config:clear
+    event:cache
+    route:cache
+    view:cache {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"config:cachee\" is not defined.
+
+Did you mean one of these?
+    config:cache
+    config:clear
+    event:cache
+    route:cache
+    view:cache at /home/eli04190/public_html/@core/vendor/symfony/console/Application.php:709)
+[stacktrace]
+#0 /home/eli04190/public_html/@core/vendor/symfony/console/Application.php(259): Symfony\\Component\\Console\\Application->find()
+#1 /home/eli04190/public_html/@core/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#2 /home/eli04190/public_html/@core/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run()
+#3 /home/eli04190/public_html/@core/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#4 /home/eli04190/public_html/@core/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 
