@@ -4,7 +4,7 @@
     'name' => 'elitetailorhoian.com',
     'env' => 'production',
     'debug' => false,
-    'url' => 'http://elitetailor.test',
+    'url' => 'https://elitetailorhoian.com',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'en',
@@ -203,7 +203,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage\\framework/cache/data',
+        'path' => '/home/eli04190/public_html/@core/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -395,7 +395,7 @@
     array (
       'enabled' => true,
       'driver' => 'file',
-      'path' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage\\debugbar',
+      'path' => '/home/eli04190/public_html/@core/storage/debugbar',
       'connection' => NULL,
       'provider' => '',
       'hostname' => '127.0.0.1',
@@ -514,13 +514,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage\\app',
+        'root' => '/home/eli04190/public_html/@core/storage/app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage\\app/public',
-        'url' => 'http://elitetailor.test/storage',
+        'root' => '/home/eli04190/public_html/@core/storage/app/public',
+        'url' => 'https://elitetailorhoian.com/storage',
         'visibility' => 'public',
       ),
       's3' => 
@@ -568,7 +568,7 @@
     'include_helpers' => false,
     'helper_files' => 
     array (
-      0 => 'F:\\PHP\\laragon\\www\\elitetailor\\@core/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
+      0 => '/home/eli04190/public_html/@core/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
     ),
     'model_locations' => 
     array (
@@ -664,13 +664,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage\\logs/laravel.log',
+        'path' => '/home/eli04190/public_html/@core/storage/logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage\\logs/laravel.log',
+        'path' => '/home/eli04190/public_html/@core/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -772,7 +772,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\resources\\views/vendor/mail',
+        0 => '/home/eli04190/public_html/@core/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -803,7 +803,7 @@
       'mode' => 'live',
       'http.ConnectionTimeOut' => 30,
       'log.LogEnabled' => true,
-      'log.FileName' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage/logs/paypal.log',
+      'log.FileName' => '/home/eli04190/public_html/@core/storage/logs/paypal.log',
       'log.LogLevel' => 'ERROR',
     ),
   ),
@@ -867,7 +867,7 @@
     'encoding' => 'UTF-8',
     'finalize' => true,
     'ignoreNonStrings' => false,
-    'cachePath' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage\\app/purifier',
+    'cachePath' => '/home/eli04190/public_html/@core/storage/app/purifier',
     'cacheFileMode' => 493,
     'settings' => 
     array (
@@ -1196,7 +1196,7 @@
       2 => '127.0.0.1',
       3 => '127.0.0.1:8000',
       4 => '::1',
-      5 => 'elitetailor.test',
+      5 => 'elitetailorhoian.com',
     ),
     'guard' => 
     array (
@@ -1255,7 +1255,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage\\framework/sessions',
+    'files' => '/home/eli04190/public_html/@core/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -1275,9 +1275,9 @@
   array (
     'paths' => 
     array (
-      0 => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\resources\\views',
+      0 => '/home/eli04190/public_html/@core/resources/views',
     ),
-    'compiled' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage\\framework\\views',
+    'compiled' => '/home/eli04190/public_html/@core/storage/framework/views',
   ),
   'dompdf' => 
   array (
@@ -1285,10 +1285,10 @@
     'orientation' => 'portrait',
     'defines' => 
     array (
-      'font_dir' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage\\fonts/',
-      'font_cache' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage\\fonts/',
-      'temp_dir' => 'C:\\Users\\Admin\\AppData\\Local\\Temp',
-      'chroot' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core',
+      'font_dir' => '/home/eli04190/public_html/@core/storage/fonts/',
+      'font_cache' => '/home/eli04190/public_html/@core/storage/fonts/',
+      'temp_dir' => '/tmp',
+      'chroot' => '/home/eli04190/public_html/@core',
       'enable_font_subsetting' => false,
       'pdf_backend' => 'CPDF',
       'default_media_type' => 'screen',
@@ -1348,7 +1348,7 @@
     'stubs' => 
     array (
       'enabled' => false,
-      'path' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\vendor/nwidart/laravel-modules/src/Commands/stubs',
+      'path' => '/home/eli04190/public_html/@core/vendor/nwidart/laravel-modules/src/Commands/stubs',
       'files' => 
       array (
         'routes/web' => 'Routes/web.php',
@@ -1412,9 +1412,9 @@
     ),
     'paths' => 
     array (
-      'modules' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\Modules',
-      'assets' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\public\\modules',
-      'migration' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\database/migrations',
+      'modules' => '/home/eli04190/public_html/@core/Modules',
+      'assets' => '/home/eli04190/public_html/@core/public/modules',
+      'migration' => '/home/eli04190/public_html/@core/database/migrations',
       'generator' => 
       array (
         'config' => 
@@ -1607,7 +1607,7 @@
       'enabled' => false,
       'paths' => 
       array (
-        0 => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\vendor/*/*',
+        0 => '/home/eli04190/public_html/@core/vendor/*/*',
       ),
     ),
     'composer' => 
@@ -1636,7 +1636,7 @@
       'file' => 
       array (
         'class' => 'Nwidart\\Modules\\Activators\\FileActivator',
-        'statuses-file' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\modules_statuses.json',
+        'statuses-file' => '/home/eli04190/public_html/@core/modules_statuses.json',
         'cache-key' => 'activator.installed',
         'cache-lifetime' => 604800,
       ),
