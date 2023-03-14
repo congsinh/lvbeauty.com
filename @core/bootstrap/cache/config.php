@@ -3,7 +3,11 @@
   array (
     'name' => 'elitetailorhoian.com',
     'env' => 'production',
+<<<<<<< HEAD
     'debug' => false,
+=======
+    'debug' => true,
+>>>>>>> c6f3f387 (fix)
     'url' => 'https://elitetailorhoian.com',
     'asset_url' => NULL,
     'timezone' => 'UTC',
@@ -519,7 +523,11 @@
       'public' => 
       array (
         'driver' => 'local',
+<<<<<<< HEAD
         'root' => '/home/eli04190/public_html/@core/storage/app/public',
+=======
+        'root' => 'F:\\PHP\\laragon\\www\\elitetailor\\@core\\storage\\app/public',
+>>>>>>> c6f3f387 (fix)
         'url' => 'https://elitetailorhoian.com/storage',
         'visibility' => 'public',
       ),

@@ -50,6 +50,7 @@ Route::group(['middleware' => ['setlang:frontend', 'globalVariable', 'maintains_
     Route::get('/', 'FrontendController@index')->name('homepage');
     Route::get('/p/{slug?}/{id}', 'FrontendController@dynamic_single_page')->name('frontend.dynamic.page');
     Route::get('/home/{id}', 'FrontendController@home_page_change')->name('homepage.demo');
+    Route::get('/gallery' , 'FrontendController@gallery_page')->name('frontend.gallery');
 
     Route::get('/' . $about_page_slug, 'FrontendController@about_page')->name('frontend.about');
 
@@ -736,6 +737,7 @@ Route::prefix('admin-home')->middleware(['setlang:backend', 'adminglobalVariable
         Route::get('/section-manage', 'HomePageController@section_manage')->name('admin.home.section.manage');
         Route::post('/section-manage', 'HomePageController@update_section_manage');
     });
+
 
 
     /**---------------------------------------------------------------------------------------------------------------------------

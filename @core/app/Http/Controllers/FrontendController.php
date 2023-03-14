@@ -312,6 +312,11 @@ class FrontendController extends Controller
         ]);
     }
 
+    public function gallery_page()
+    {
+        return view('frontend.pages.gallery-page');
+    }
+
     public function request_quote()
     {
         return view('frontend.pages.quote-page');
